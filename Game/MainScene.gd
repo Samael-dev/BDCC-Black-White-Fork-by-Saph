@@ -1428,9 +1428,9 @@ func loadDatapack(datapackID):
 		elif(theCharType == CharacterType.Guard):
 			addDynamicCharacterToPool(finalID, CharacterPool.Guards)
 		elif(theCharType == CharacterType.Nurse):
-			addDynamicCharacterToPool(finalID, CharacterPool.Nurses)
+			addDynamicCharacterToPool(finalID, CharacterPool.Guards)
 		elif(theCharType == CharacterType.Engineer):
-			addDynamicCharacterToPool(finalID, CharacterPool.Engineers)
+			addDynamicCharacterToPool(finalID, CharacterPool.Guards)
 	
 	return true
 

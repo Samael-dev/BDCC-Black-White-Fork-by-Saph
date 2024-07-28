@@ -52,8 +52,9 @@ theme = ExtResource( 2 )
 script = ExtResource( 4 )
 
 [node name="NameLabel" type="Label" parent="."]
-margin_right = 354.0
-margin_bottom = 28.0
+margin_top = -1.0
+margin_right = 331.0
+margin_bottom = 33.4
 custom_fonts/font = SubResource( 1 )
 text = "Player name"
 clip_text = true
@@ -61,41 +62,41 @@ clip_text = true
 [node name="LevelBar" parent="." instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 32.0
-margin_right = 354.0
-margin_bottom = 54.0
+margin_top = 37.0
+margin_right = 331.0
+margin_bottom = 64.0
 colorGradient = SubResource( 5 )
 propertyName = "Level"
 
 [node name="PainBar" parent="." instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 58.0
-margin_right = 354.0
-margin_bottom = 80.0
+margin_top = 67.0
+margin_right = 331.0
+margin_bottom = 94.0
 colorGradient = SubResource( 3 )
 propertyName = "Pain"
 
 [node name="ConsciousnessBar" parent="." instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 84.0
-margin_right = 354.0
-margin_bottom = 106.0
+margin_top = 97.0
+margin_right = 331.0
+margin_bottom = 124.0
 colorGradient = SubResource( 3 )
 propertyName = "Consciousness"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_top = 110.0
-margin_right = 354.0
-margin_bottom = 132.0
+margin_top = 127.0
+margin_right = 331.0
+margin_bottom = 154.0
 size_flags_horizontal = 3
 
 [node name="LustBar" parent="HBoxContainer" instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 175.0
-margin_bottom = 22.0
+margin_right = 164.0
+margin_bottom = 27.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 colorGradient = SubResource( 4 )
@@ -104,9 +105,9 @@ propertyName = "Lust"
 [node name="ArousalBar" parent="HBoxContainer" instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 179.0
-margin_right = 354.0
-margin_bottom = 22.0
+margin_left = 167.0
+margin_right = 331.0
+margin_bottom = 27.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 colorGradient = SubResource( 4 )
@@ -115,22 +116,22 @@ propertyName = "Arousal"
 [node name="StaminaBar" parent="." instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 136.0
-margin_right = 354.0
-margin_bottom = 158.0
+margin_top = 157.0
+margin_right = 331.0
+margin_bottom = 184.0
 colorGradient = SubResource( 6 )
 propertyName = "Stamina"
 
 [node name="CreditsLabel" type="Label" parent="."]
-margin_top = 162.0
-margin_right = 354.0
-margin_bottom = 182.0
+margin_top = 186.0
+margin_right = 331.0
+margin_bottom = 211.4
 text = "Credits"
 
 [node name="ViewportWrapper" type="Control" parent="."]
-margin_top = 186.0
-margin_right = 354.0
-margin_bottom = 632.0
+margin_top = 215.0
+margin_right = 331.0
+margin_bottom = 629.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -156,16 +157,16 @@ texture = SubResource( 7 )
 viewportPath = NodePath("../Viewport")
 
 [node name="StatusEffectsLabel" type="Label" parent="."]
-margin_top = 636.0
-margin_right = 354.0
-margin_bottom = 656.0
+margin_top = 631.0
+margin_right = 331.0
+margin_bottom = 656.4
 text = "Status Effects"
 
 [node name="FlexGridContainer" parent="." instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 660.0
-margin_right = 354.0
+margin_right = 331.0
 margin_bottom = 720.0
 rect_min_size = Vector2( 0, 60 )
 

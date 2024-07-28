@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://UI/LabeledProgressBar.gd" type="Script" id=1]
+[ext_resource path="res://GlobalTheme.tres" type="Theme" id=2]
 
 [sub_resource type="StyleBoxEmpty" id=3]
 
@@ -18,6 +19,7 @@ bg_color = Color( 0, 0, 0, 0.235294 )
 [node name="LabeledProgressBar" type="PanelContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 2 )
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 1 )
 colorGradient = SubResource( 5 )
@@ -58,24 +60,24 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
-margin_top = 352.0
-margin_right = 54.0
-margin_bottom = 366.0
+margin_top = 346.0
+margin_right = 68.4
+margin_bottom = 371.4
 text = "Property"
 
 [node name="Label3" type="Label" parent="MarginContainer/HBoxContainer"]
-margin_left = 58.0
-margin_top = 352.0
-margin_right = 1205.0
-margin_bottom = 366.0
+margin_left = 71.0
+margin_top = 346.0
+margin_right = 1193.0
+margin_bottom = 371.4
 size_flags_horizontal = 3
 align = 1
 
 [node name="Label2" type="Label" parent="MarginContainer/HBoxContainer"]
-margin_left = 1209.0
-margin_top = 352.0
-margin_right = 1270.0
-margin_bottom = 366.0
+margin_left = 1196.0
+margin_top = 346.0
+margin_right = 1270.4
+margin_bottom = 371.4
 text = "100 / 100"
 
 [node name="Tween" type="Tween" parent="."]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Game/Datapacks/UI/PackVariables.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game/Datapacks/UI/Editors/DatapackCharacterEditor.gd" type="Script" id=2]
 [ext_resource path="res://UI/CustomViewportControl.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/Player3D/Doll3D.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GlobalTheme.tres" type="Theme" id=5]
 
 [sub_resource type="Environment" id=1]
 
@@ -13,6 +14,7 @@ viewport_path = NodePath("VBoxContainer/HBoxContainer/DollWrapper/Viewport")
 [node name="DatapackCharacterEditor" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 5 )
 script = ExtResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -21,26 +23,26 @@ anchor_bottom = 1.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_right = 1280.0
-margin_bottom = 616.0
+margin_bottom = 617.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer"]
-margin_right = 976.0
-margin_bottom = 616.0
+margin_right = 977.0
+margin_bottom = 617.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="PackVariables" parent="VBoxContainer/HBoxContainer/ScrollContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 976.0
-margin_bottom = 20.0
+margin_right = 977.0
+margin_bottom = 25.0
 
 [node name="DollWrapper" type="Control" parent="VBoxContainer/HBoxContainer"]
 margin_left = 980.0
 margin_right = 1280.0
-margin_bottom = 616.0
+margin_bottom = 617.0
 rect_min_size = Vector2( 300, 0 )
 size_flags_vertical = 3
 
@@ -70,7 +72,7 @@ columns = 5
 
 [node name="SaveButton" type="Button" parent="VBoxContainer/GridContainer"]
 margin_right = 256.0
-margin_bottom = 20.0
+margin_bottom = 23.0
 size_flags_horizontal = 3
 text = "Save"
 

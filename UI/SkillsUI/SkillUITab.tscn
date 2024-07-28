@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://UI/LabeledProgressBar.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/SkillsUI/SkillUITab.gd" type="Script" id=2]
 [ext_resource path="res://UI/SkillsUI/PerksTierContainer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Game/SmartScrollContainer.gd" type="Script" id=4]
+[ext_resource path="res://GlobalTheme.tres" type="Theme" id=5]
 
 [sub_resource type="Gradient" id=1]
 resource_local_to_scene = true
@@ -12,6 +13,7 @@ colors = PoolColorArray( 0.172549, 0.345098, 0.545098, 1, 0.172549, 0.345098, 0.
 [node name="SkillUITab" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 5 )
 script = ExtResource( 2 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
@@ -21,115 +23,117 @@ script = ExtResource( 4 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 margin_right = 1280.0
-margin_bottom = 212.0
+margin_bottom = 260.0
 size_flags_horizontal = 3
 
 [node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/VBoxContainer"]
 margin_right = 1280.0
-margin_bottom = 98.0
+margin_bottom = 128.0
 mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/PanelContainer"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 1273.0
-margin_bottom = 91.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 1278.0
+margin_bottom = 126.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
 
 [node name="NameLabel" type="Label" parent="ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer"]
-margin_right = 1266.0
-margin_bottom = 14.0
+margin_top = -1.0
+margin_right = 1276.0
+margin_bottom = 24.4
 mouse_filter = 1
 text = "Skill visible name"
 
 [node name="LevelBar" parent="ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 18.0
-margin_right = 1266.0
-margin_bottom = 34.0
+margin_top = 28.0
+margin_right = 1276.0
+margin_bottom = 55.0
 colorGradient = SubResource( 1 )
 propertyName = "Level 1"
 
 [node name="DescLabel" type="Label" parent="ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer"]
-margin_top = 38.0
-margin_right = 1266.0
-margin_bottom = 52.0
+margin_top = 57.0
+margin_right = 1276.0
+margin_bottom = 82.4
 mouse_filter = 1
 text = "Skill visible desc"
 
 [node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer"]
-margin_top = 56.0
-margin_right = 1266.0
-margin_bottom = 66.0
+margin_top = 86.0
+margin_right = 1276.0
+margin_bottom = 96.0
 rect_min_size = Vector2( 0, 10 )
 mouse_filter = 1
 
 [node name="PerksLabel" type="Label" parent="ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer"]
-margin_top = 70.0
-margin_right = 1266.0
-margin_bottom = 84.0
+margin_top = 98.0
+margin_right = 1276.0
+margin_bottom = 123.4
 mouse_filter = 1
 text = "Skill perks:"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-margin_top = 102.0
+margin_top = 131.0
 margin_right = 1280.0
-margin_bottom = 212.0
+margin_bottom = 260.0
 
 [node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
 margin_right = 638.0
-margin_bottom = 110.0
+margin_bottom = 100.0
 mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 0
 
 [node name="TiersContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/PanelContainer"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 631.0
-margin_bottom = 103.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 636.0
+margin_bottom = 98.0
 size_flags_horizontal = 3
 
 [node name="PerksTierContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/PanelContainer/TiersContainer" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 624.0
+margin_right = 634.0
 margin_bottom = 96.0
 
 [node name="PanelContainer2" type="PanelContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
-margin_left = 642.0
+margin_left = 641.0
 margin_right = 1280.0
-margin_bottom = 110.0
+margin_bottom = 129.0
 mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/PanelContainer2"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 631.0
-margin_bottom = 103.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 637.0
+margin_bottom = 127.0
 
 [node name="PerkNameLabel" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/PanelContainer2/VBoxContainer"]
-margin_right = 624.0
-margin_bottom = 14.0
+margin_top = -1.0
+margin_right = 635.0
+margin_bottom = 24.4
 mouse_filter = 1
 text = "Select a perk on the left"
 
 [node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/PanelContainer2/VBoxContainer"]
-margin_top = 18.0
-margin_right = 624.0
-margin_bottom = 23.0
+margin_top = 28.0
+margin_right = 635.0
+margin_bottom = 33.0
 rect_min_size = Vector2( 0, 5 )
 
 [node name="PerkDescLabel" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/HBoxContainer/PanelContainer2/VBoxContainer"]
-margin_top = 27.0
-margin_right = 624.0
-margin_bottom = 42.0
+margin_top = 36.0
+margin_right = 635.0
+margin_bottom = 62.0
 mouse_filter = 1
 bbcode_enabled = true
 bbcode_text = "Description will be shown here"
@@ -137,15 +141,15 @@ text = "Description will be shown here"
 fit_content_height = true
 
 [node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/PanelContainer2/VBoxContainer"]
-margin_top = 46.0
-margin_right = 624.0
-margin_bottom = 51.0
+margin_top = 65.0
+margin_right = 635.0
+margin_bottom = 70.0
 rect_min_size = Vector2( 0, 5 )
 
 [node name="PerkRequirementsLabel" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/HBoxContainer/PanelContainer2/VBoxContainer"]
-margin_top = 55.0
-margin_right = 624.0
-margin_bottom = 70.0
+margin_top = 73.0
+margin_right = 635.0
+margin_bottom = 99.0
 mouse_filter = 1
 bbcode_enabled = true
 bbcode_text = "Requirements will be shown here"
@@ -153,20 +157,20 @@ text = "Requirements will be shown here"
 fit_content_height = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/PanelContainer2/VBoxContainer"]
-margin_top = 74.0
-margin_right = 624.0
-margin_bottom = 94.0
+margin_top = 102.0
+margin_right = 635.0
+margin_bottom = 125.0
 
 [node name="UnlockPerkButton" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer"]
-margin_right = 310.0
-margin_bottom = 20.0
+margin_right = 316.0
+margin_bottom = 23.0
 size_flags_horizontal = 3
 text = "Learn"
 
 [node name="TogglePerkButton" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer"]
-margin_left = 314.0
-margin_right = 624.0
-margin_bottom = 20.0
+margin_left = 319.0
+margin_right = 635.0
+margin_bottom = 23.0
 size_flags_horizontal = 3
 text = "Toggle perk on/off"
 
