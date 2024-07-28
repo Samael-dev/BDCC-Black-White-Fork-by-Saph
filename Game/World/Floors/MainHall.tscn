@@ -1,0 +1,748 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Game/World/SubWorld.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/World/GameRoom.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game/World/Floors/MainHall.gd" type="Script" id=3]
+
+[node name="MainHall" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="MainHallRoom" parent="." index="0" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+roomName = "Security checkpoint"
+roomID = "hall_checkpoint"
+roomDescription = "A short corridor that connects the cellblock and the elevator. A guard checkpoint is placed here."
+roomSprite = 1
+roomColor = 2
+population = 2
+
+[node name="MainHallRoom2" parent="." index="1" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 0, 64 )
+roomName = "Main hall"
+roomID = "hall_mainentrance"
+roomDescription = "A very spacious hall with a huge raised platform in the middle"
+roomColor = 8
+population = 3
+
+[node name="MainHallRoom3" parent="." index="2" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -64, 320 )
+roomName = "Main hall"
+roomID = "main_hallroom5"
+roomDescription = "A very spacious hall with a huge raised platform in the middle"
+roomColor = 8
+population = 3
+
+[node name="MainHallRoom4" parent="." index="3" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 64, 320 )
+roomName = "Main hall"
+roomID = "main_hallroom7"
+roomDescription = "A very spacious hall with a huge raised platform in the middle"
+roomColor = 8
+population = 3
+
+[node name="MainElevator" parent="." index="4" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 0, -64 )
+roomName = "Elevator"
+roomID = "hall_elevator"
+roomDescription = "Spacious elevator that can move people or a huge amount of cargo between floors. Walls are made out of black painted metal, you notice a control panel that has a few buttons."
+roomSprite = 3
+roomColor = 2
+population = 2
+astarConnectedTo = PoolStringArray( "med_elevator", "mining_elevator" )
+
+[node name="MainStairs1" parent="." index="5" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -64, 64 )
+roomName = "Stairs"
+roomID = "main_stairs1"
+roomDescription = "Stairs that will lead you to the lower level"
+canNorth = false
+canSouth = false
+roomSprite = 3
+roomColor = 7
+population = 3
+astarConnectedTo = PoolStringArray( "CBStairs1" )
+
+[node name="MainHallRoom7" parent="." index="6" instance=ExtResource( 2 )]
+position = Vector2( 0, 128 )
+roomName = "Stairs"
+roomID = "main_stairs_n"
+roomDescription = "You stand on the stairs that lead up to the main platform"
+population = 3
+
+[node name="MainStairs2" parent="." index="7" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 64, 64 )
+roomName = "Stairs"
+roomID = "main_stairs2"
+roomDescription = "Stairs that will lead you to the lower level"
+canNorth = false
+canSouth = false
+roomSprite = 3
+roomColor = 7
+population = 3
+
+[node name="MainHallRoom9" parent="." index="8" instance=ExtResource( 2 )]
+position = Vector2( 0, 192 )
+roomName = "Main platform"
+roomID = "main_punishment_spot"
+roomDescription = "This is clearly the public punishment area. You see a few pillories, one-bar prisons and chain posts"
+roomSprite = 4
+population = 3
+
+[node name="MainHallRoom10" parent="." index="9" instance=ExtResource( 2 )]
+position = Vector2( -64, 192 )
+roomName = "Stairs"
+roomID = "main_stairs_w"
+roomDescription = "You stand on the stairs that lead up to the main platform"
+population = 3
+
+[node name="MainHallRoom52" parent="." index="10" instance=ExtResource( 2 )]
+position = Vector2( -64, 256 )
+roomName = "Main platform"
+roomID = "main_bench3"
+roomDescription = "Has some benches to relax and watch the inmates being punished"
+canWest = false
+canSouth = false
+population = 3
+
+[node name="MainHallRoom53" parent="." index="11" instance=ExtResource( 2 )]
+position = Vector2( 0, 256 )
+roomName = "Stairs"
+roomID = "main_stairs_s"
+roomDescription = "You stand on the stairs that lead up to the main platform"
+population = 3
+
+[node name="MainHallRoom54" parent="." index="12" instance=ExtResource( 2 )]
+position = Vector2( 64, 256 )
+roomName = "Main platform"
+roomID = "main_bench4"
+roomDescription = "Has some benches to relax and watch the inmates being punished"
+canEast = false
+canSouth = false
+population = 3
+
+[node name="MainHallRoom12" parent="." index="13" instance=ExtResource( 2 )]
+position = Vector2( -64, 128 )
+roomName = "Main platform"
+roomID = "main_bench1"
+roomDescription = "Has some benches to relax and watch the inmates being punished"
+canWest = false
+canNorth = false
+population = 3
+
+[node name="MainHallRoom49" parent="." index="14" instance=ExtResource( 2 )]
+position = Vector2( 64, 128 )
+roomName = "Main platform"
+roomID = "main_bench2"
+roomDescription = "Has some benches to relax and watch the inmates being punished"
+canNorth = false
+canEast = false
+roomSprite = 1
+population = 3
+
+[node name="MainHallRoom27" parent="." index="15" instance=ExtResource( 2 )]
+position = Vector2( 0, 384 )
+roomName = "Corridor"
+roomDescription = "A little corridor connecting the main hall and the garden"
+population = 3
+
+[node name="MainHallRoom48" parent="." index="16" instance=ExtResource( 2 )]
+position = Vector2( 128, 448 )
+roomName = "Stairs"
+roomDescription = "A set of stairs that lead to the greenhouses level. Markings on the floor remind the inmates that the greenhouses are [color=red]off-limits[/color] for them"
+gridColor = 2
+population = 2
+
+[node name="MainHallRoom37" parent="." index="17" instance=ExtResource( 2 )]
+position = Vector2( -128, 576 )
+roomName = "Gym area"
+roomID = "gym_entrance"
+roomDescription = "You can see yoga carpets, treadmills and a few benches for weight lifting"
+population = 1
+
+[node name="MainHallRoom55" parent="." index="18" instance=ExtResource( 2 )]
+position = Vector2( -192, 576 )
+roomName = "Gym area"
+roomID = "gym_weights"
+roomDescription = "You can see yoga carpets, treadmills and a few benches for weight lifting"
+population = 1
+
+[node name="MainHallRoom56" parent="." index="19" instance=ExtResource( 2 )]
+position = Vector2( -192, 640 )
+roomName = "Gym area"
+roomID = "gym_nearbathroom"
+roomDescription = "You can see yoga carpets, treadmills and a few benches for weight lifting"
+population = 1
+
+[node name="MainHallRoom57" parent="." index="20" instance=ExtResource( 2 )]
+position = Vector2( -128, 640 )
+roomName = "Gym area"
+roomID = "gym_yoga"
+roomDescription = "You can see yoga carpets, treadmills and a few benches for weight lifting"
+population = 1
+
+[node name="MainHallRoom58" parent="." index="21" instance=ExtResource( 2 )]
+position = Vector2( -128, 704 )
+roomName = "Secluded place"
+roomID = "gym_secret"
+roomDescription = "You find that behind one of the tall bushes there is actually a little secluded spot. It’s not too interesting, there is no pathway here even. But you notice someone leaning against the wall near some kind of maintenance hatch."
+roomSprite = 1
+population = 1
+astarConnectedTo = PoolStringArray( "fight_entrance" )
+
+[node name="MainHallRoom28" parent="." index="22" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 64, 576 )
+roomName = "Prison Yard"
+roomDescription = "A huge open area with lots of bushes, trees and other types of greenery. Ocasionally there is a bench to sit and relax.
+
+The ground is covered with grass, there are visible pathways made out of stone"
+roomColor = 1
+population = 1
+
+[node name="MainHallRoom40" parent="." index="23" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 128, 576 )
+roomName = "Prison Yard"
+roomDescription = "A huge open area with lots of bushes, trees and other types of greenery. Ocasionally there is a bench to sit and relax.
+
+The ground is covered with grass, there are visible pathways made out of stone"
+roomColor = 1
+population = 1
+
+[node name="MainHallRoom42" parent="." index="24" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 64, 640 )
+roomName = "Prison Yard"
+roomID = "yard_deadend2"
+roomDescription = "A huge open area with lots of bushes, trees and other types of greenery. Ocasionally there is a bench to sit and relax.
+
+The ground is covered with grass, there are visible pathways made out of stone"
+roomColor = 1
+population = 1
+
+[node name="MainHallRoom43" parent="." index="25" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 192, 576 )
+roomName = "Prison Yard"
+roomDescription = "A huge open area with lots of bushes, trees and other types of greenery. Ocasionally there is a bench to sit and relax.
+
+The ground is covered with grass, there are visible pathways made out of stone"
+roomColor = 1
+population = 1
+
+[node name="MainHallRoom44" parent="." index="26" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 192, 640 )
+roomName = "Prison Yard"
+roomID = "yard_waterfall"
+roomDescription = "A huge open area with lots of bushes, trees and other types of greenery. Ocasionally there is a bench to sit and relax.
+
+The ground is covered with grass, there are visible pathways made out of stone.
+
+This spot is particularly nice. The path ends here with a fancy little pond. Above it is a small waterfall, perfect for meditating."
+roomColor = 1
+population = 1
+
+[node name="MainHallRoom45" parent="." index="27" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -64, 640 )
+roomName = "Prison Yard"
+roomID = "yard_deadend1"
+roomDescription = "A huge open area with lots of bushes, trees and other types of greenery. Ocasionally there is a bench to sit and relax.
+
+The ground is covered with grass, there are visible pathways made out of stone"
+canWest = false
+roomColor = 1
+population = 1
+
+[node name="MainHallRoom46" parent="." index="28" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 256, 576 )
+roomName = "Prison Yard"
+roomID = "yard_vaulthere"
+roomDescription = "A huge open area with lots of bushes, trees and other types of greenery. Ocasionally there is a bench to sit and relax.
+
+The ground is covered with grass, there are visible pathways made out of stone"
+roomColor = 1
+population = 1
+
+[node name="MainHallRoom47" parent="." index="29" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -128, 448 )
+roomName = "Prison Yard"
+roomID = "yard_novaspot"
+roomDescription = "A huge open area with lots of bushes, trees and other types of greenery. Ocasionally there is a bench to sit and relax.
+
+The ground is covered with grass, there are visible pathways made out of stone"
+roomSprite = 1
+roomColor = 1
+population = 1
+
+[node name="MainHallRoom29" parent="." index="30" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 64, 512 )
+roomName = "Prison Yard"
+roomID = "yard_eastCorridor"
+roomDescription = "A huge open area with lots of bushes, trees and other types of greenery. Ocasionally there is a bench to sit and relax.
+
+The ground is covered with grass, there are visible pathways made out of stone"
+roomColor = 1
+population = 1
+
+[node name="MainHallRoom30" parent="." index="31" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 64, 448 )
+roomName = "Prison Yard"
+roomID = "yard_nearstairs"
+roomDescription = "A huge open area with lots of bushes, trees and other types of greenery. Ocasionally there is a bench to sit and relax.
+
+The ground is covered with grass, there are visible pathways made out of stone"
+roomColor = 1
+population = 1
+
+[node name="MainHallRoom31" parent="." index="32" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 0, 448 )
+roomName = "Prison Yard"
+roomID = "yard_firstroom"
+roomDescription = "A huge open area with lots of bushes, trees and other types of greenery. Ocasionally there is a bench to sit and relax.
+
+The ground is covered with grass, there are visible pathways made out of stone"
+roomColor = 1
+population = 1
+
+[node name="MainGreenhouses" parent="." index="33" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 192, 448 )
+roomName = "Greenhouses"
+roomDescription = "You see some greenhouses. This is where all the apples, eggplants and other vegetables and fruits are grown.
+
+The greenhouses are marked as [color=red]off-limits[/color] for inmates"
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+population = 2
+
+[node name="MainGreenhouses2" parent="." index="34" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 256, 448 )
+roomName = "Greenhouses"
+roomDescription = "You see some greenhouses. This is where all the apples, eggplants and other vegetables and fruits are grown.
+
+The greenhouses are marked as [color=red]off-limits[/color] for inmates"
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+population = 2
+
+[node name="MainGreenhouses3" parent="." index="35" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 192, 384 )
+roomName = "Greenhouses"
+roomDescription = "You see some greenhouses. This is where all the apples, eggplants and other vegetables and fruits are grown.
+
+The greenhouses are marked as [color=red]off-limits[/color] for inmates"
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+population = 2
+
+[node name="MainGreenhouses4" parent="." index="36" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 256, 384 )
+roomName = "Greenhouses"
+roomDescription = "You see some greenhouses. This is where all the apples, eggplants and other vegetables and fruits are grown.
+
+The greenhouses are marked as [color=red]off-limits[/color] for inmates"
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+population = 2
+
+[node name="MainGreenhouses7" parent="." index="37" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, 384 )
+roomName = "Greenhouses"
+roomDescription = "You see some greenhouses. This is where all the apples, eggplants and other vegetables and fruits are grown.
+
+The greenhouses are marked as [color=red]off-limits[/color] for inmates"
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+population = 2
+
+[node name="MainGreenhouses9" parent="." index="38" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, 320 )
+roomName = "Greenhouses"
+roomDescription = "You see some greenhouses. This is where all the apples, eggplants and other vegetables and fruits are grown.
+
+The greenhouses are marked as [color=red]off-limits[/color] for inmates"
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+population = 2
+lootable = true
+lootAroundMessage = "You notice a credit chip under one of the crates, huh."
+lootCredits = 3
+
+[node name="MainGreenhouses8" parent="." index="39" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, 512 )
+roomName = "Greenhouses"
+roomID = "green_chokepoint"
+roomDescription = "You see some greenhouses. This is where all the apples, eggplants and other vegetables and fruits are grown.
+
+The greenhouses are marked as [color=red]off-limits[/color] for inmates"
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+population = 2
+
+[node name="MainGreenhousesJumpable" parent="." index="40" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, 576 )
+roomName = "Greenhouses"
+roomDescription = "You see some greenhouses. This is where all the apples, eggplants and other vegetables and fruits are grown.
+
+The greenhouses are marked as [color=red]off-limits[/color] for inmates"
+canWest = false
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+population = 2
+
+[node name="MainGreenhouses10" parent="." index="41" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, 704 )
+roomName = "Greenhouses"
+roomDescription = "You see some greenhouses. This is where all the apples, eggplants and other vegetables and fruits are grown.
+
+The greenhouses are marked as [color=red]off-limits[/color] for inmates"
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+population = 2
+
+[node name="MainGreenhouses11" parent="." index="42" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 384, 640 )
+roomName = "Greenhouses"
+roomDescription = "You see some greenhouses. This is where all the apples, eggplants and other vegetables and fruits are grown.
+
+The greenhouses are marked as [color=red]off-limits[/color] for inmates"
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+population = 2
+
+[node name="MainGreenhouses12" parent="." index="43" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 384, 576 )
+roomName = "Greenhouses"
+roomDescription = "You see some greenhouses. This is where all the apples, eggplants and other vegetables and fruits are grown.
+
+The greenhouses are marked as [color=red]off-limits[/color] for inmates"
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+population = 2
+
+[node name="MainGreenhouses13" parent="." index="44" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, 640 )
+roomName = "Greenhouses"
+roomDescription = "You see some greenhouses. This is where all the apples, eggplants and other vegetables and fruits are grown.
+
+The greenhouses are marked as [color=red]off-limits[/color] for inmates"
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+population = 2
+
+[node name="MainGreenhouses5" parent="." index="45" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 384, 704 )
+roomName = "Greenhouses"
+roomID = "main_greenhouses"
+roomDescription = "You see some greenhouses. This is where all the apples, eggplants and other vegetables and fruits are grown.
+
+The greenhouses are marked as [color=red]off-limits[/color] for inmates
+
+You see a few crates with fruits and vegetables here"
+roomSprite = 4
+roomColor = 1
+gridColor = 2
+population = 2
+
+[node name="MainGreenhouses6" parent="." index="46" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, 448 )
+roomName = "Greenhouses"
+roomDescription = "You see some greenhouses. This is where all the apples, eggplants and other vegetables and fruits are grown.
+
+The greenhouses are marked as [color=red]off-limits[/color] for inmates"
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+population = 2
+
+[node name="MainHallRoom32" parent="." index="47" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -64, 448 )
+roomName = "Prison Yard"
+roomDescription = "A huge open area with lots of bushes, trees and other types of greenery. Ocasionally there is a bench to sit and relax.
+
+The ground is covered with grass, there are visible pathways made out of stone"
+roomColor = 1
+population = 1
+
+[node name="MainHallRoom33" parent="." index="48" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -64, 512 )
+roomName = "Prison Yard"
+roomID = "yard_westCorridor"
+roomDescription = "A huge open area with lots of bushes, trees and other types of greenery. Ocasionally there is a bench to sit and relax.
+
+The ground is covered with grass, there are visible pathways made out of stone"
+roomColor = 1
+population = 1
+
+[node name="MainHallRoom34" parent="." index="49" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -64, 576 )
+roomName = "Prison Yard"
+roomID = "yard_neargym"
+roomDescription = "A huge open area with lots of bushes, trees and other types of greenery. Ocasionally there is a bench to sit and relax.
+
+The ground is covered with grass, there are visible pathways made out of stone"
+roomColor = 1
+population = 1
+
+[node name="MainHallRoom35" parent="." index="50" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 0, 576 )
+roomName = "Prison Yard"
+roomID = "yard_northCorridor"
+roomDescription = "A huge open area with lots of bushes, trees and other types of greenery. Ocasionally there is a bench to sit and relax.
+
+The ground is covered with grass, there are visible pathways made out of stone"
+roomColor = 1
+population = 1
+
+[node name="MainHallRoom11" parent="." index="51" instance=ExtResource( 2 )]
+position = Vector2( 64, 192 )
+roomName = "Stairs"
+roomID = "main_stairs_e"
+roomDescription = "You stand on the stairs that lead up to the main platform"
+population = 3
+
+[node name="MainVendomatRoom" parent="." index="52" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, 64 )
+roomName = "Main hall"
+roomID = "main_hallroom1"
+roomDescription = "A very spacious hall with a huge raised platform in the middle"
+roomSprite = 6
+roomColor = 8
+population = 3
+
+[node name="MainHallRoom13" parent="." index="53" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, 128 )
+roomName = "Main hall"
+roomID = "main_hallroom11"
+roomDescription = "A very spacious hall with a huge raised platform in the middle"
+roomColor = 8
+population = 3
+
+[node name="MainHallRoom14" parent="." index="54" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, 192 )
+roomName = "Main hall"
+roomID = "main_hallroom10"
+roomDescription = "A very spacious hall with a huge raised platform in the middle"
+roomColor = 8
+population = 3
+
+[node name="MainHallRoom15" parent="." index="55" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, 192 )
+roomName = "Main hall"
+roomID = "main_hall_west"
+roomDescription = "A very spacious hall with a huge raised platform in the middle"
+roomColor = 8
+population = 3
+
+[node name="MainHallRoom25" parent="." index="56" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, 256 )
+roomName = "Main hall"
+roomID = "main_hallroom3"
+roomDescription = "A very spacious hall with a huge raised platform in the middle"
+roomColor = 8
+population = 3
+
+[node name="MainHallRoom50" parent="." index="57" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, 320 )
+roomName = "Main hall"
+roomID = "main_hallroom4"
+roomDescription = "A very spacious hall with a huge raised platform in the middle"
+roomColor = 8
+population = 3
+
+[node name="MainHallRoom51" parent="." index="58" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, 320 )
+roomName = "Main hall"
+roomID = "main_hallroom8"
+roomDescription = "A very spacious hall with a huge raised platform in the middle"
+roomColor = 8
+population = 3
+
+[node name="MainHallRoom26" parent="." index="59" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, 256 )
+roomName = "Main hall"
+roomID = "main_hallroom9"
+roomDescription = "A very spacious hall with a huge raised platform in the middle"
+roomColor = 8
+population = 3
+
+[node name="MainHallRoom16" parent="." index="60" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, 128 )
+roomName = "Main hall"
+roomID = "main_hallroom2"
+roomDescription = "A very spacious hall with a huge raised platform in the middle"
+roomColor = 8
+population = 3
+
+[node name="MainHallRoom17" parent="." index="61" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, 64 )
+roomName = "Main hall"
+roomID = "hall_ne_corner"
+roomDescription = "A very spacious hall with a huge raised platform in the middle"
+roomColor = 8
+population = 3
+
+[node name="MainHallRoom19" parent="." index="62" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 0, 320 )
+roomName = "Main hall"
+roomID = "main_hallroom6"
+roomDescription = "A very spacious hall with a huge raised platform in the middle
+
+There is a wide corridor here that leads out into the yard area."
+roomColor = 8
+population = 3
+
+[node name="MainHallRoom21" parent="." index="63" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -192, 256 )
+roomName = "Bathroom"
+roomID = "main_bathroom1"
+roomDescription = "A bunch of sinks in a row with a long mirror above. On the opposite side from them are the toilet stalls and a few urinals"
+roomSprite = 8
+roomColor = 3
+
+[node name="MainHallRoom38" parent="." index="64" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -256, 640 )
+roomName = "Bathroom"
+roomID = "main_bathroom2"
+roomDescription = "A bunch of sinks in a row with a long mirror above. On the opposite side from them are the toilet stalls and a few urinals"
+roomSprite = 8
+roomColor = 3
+
+[node name="MainDressingRoom" parent="." index="65" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -256, 256 )
+roomName = "Dressing room"
+roomID = "main_dressing1"
+roomDescription = "You enter the dressing room. There are many color-coded lockers around and a few bins with fresh towels"
+roomColor = 3
+
+[node name="MainShowerRoom" parent="." index="66" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -256, 320 )
+roomName = "Shower"
+roomID = "main_shower1"
+roomDescription = "A room with that has a bunch of shower heads on the walls. Soap doesn't seem to be included"
+roomSprite = 7
+roomColor = 3
+
+[node name="MainHallRoom41" parent="." index="67" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -320, 704 )
+roomName = "Shower"
+roomID = "main_shower2"
+roomDescription = "A room with that has a bunch of shower heads on the walls. Soap doesn't seem to be included"
+roomSprite = 7
+roomColor = 3
+
+[node name="MainHallRoom39" parent="." index="68" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -256, 704 )
+roomName = "Dressing room"
+roomID = "main_dressing2"
+roomDescription = "You enter the dressing room. There are many color-coded lockers around and a few bins with fresh towels"
+roomColor = 3
+
+[node name="MainCanteen" parent="." index="69" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -192, 128 )
+roomName = "Canteen"
+roomID = "hall_canteen"
+roomDescription = "You see lots of tables around and a counter where inmates get their food"
+canWest = false
+canSouth = false
+roomSprite = 2
+roomColor = 3
+population = 3
+
+[node name="MainLaundry" parent="." index="70" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 192, 256 )
+roomName = "Laundry"
+roomID = "main_laundry"
+roomDescription = "Half of the room is taken by a row of bulky industrial-looking washing machines. Then your eye spots a few bins with inmate uniforms and a uniform vendor, similliar to the one that you saw during the intake"
+roomSprite = 9
+roomColor = 3
+
+[connection signal="onEnter" from="MainElevator" to="." method="_on_MainElevator_onEnter"]
+[connection signal="onReact" from="MainElevator" to="." method="_on_MainElevator_onReact"]
+[connection signal="onEnter" from="MainStairs1" to="." method="_on_MainStairs1_onEnter"]
+[connection signal="onReact" from="MainStairs1" to="." method="_on_MainStairs1_onReact"]
+[connection signal="onEnter" from="MainStairs2" to="." method="_on_MainStairs2_onEnter"]
+[connection signal="onReact" from="MainStairs2" to="." method="_on_MainStairs2_onReact"]
+[connection signal="onEnter" from="MainHallRoom9" to="." method="_on_MainHallRoom9_onEnter"]
+[connection signal="onReact" from="MainHallRoom9" to="." method="_on_MainHallRoom9_onReact"]
+[connection signal="onEnter" from="MainGreenhousesJumpable" to="." method="_on_MainGreenhousesJumpable_onEnter"]
+[connection signal="onReact" from="MainGreenhousesJumpable" to="." method="_on_MainGreenhousesJumpable_onReact"]
+[connection signal="onEnter" from="MainVendomatRoom" to="." method="_on_MainVendomatRoom_onEnter"]
+[connection signal="onReact" from="MainVendomatRoom" to="." method="_on_MainVendomatRoom_onReact"]
+[connection signal="onEnter" from="MainHallRoom21" to="." method="_on_MainHallRoom21_onEnter"]
+[connection signal="onReact" from="MainHallRoom21" to="." method="_on_MainHallRoom21_onReact"]
+[connection signal="onEnter" from="MainHallRoom38" to="." method="_on_MainHallRoom21_onEnter"]
+[connection signal="onReact" from="MainHallRoom38" to="." method="_on_MainHallRoom21_onReact"]
+[connection signal="onEnter" from="MainDressingRoom" to="." method="_on_MainDressingRoom_onEnter"]
+[connection signal="onReact" from="MainDressingRoom" to="." method="_on_MainDressingRoom_onReact"]
+[connection signal="onEnter" from="MainShowerRoom" to="." method="_on_MainShowerRoom_onEnter"]
+[connection signal="onReact" from="MainShowerRoom" to="." method="_on_MainShowerRoom_onReact"]
+[connection signal="onEnter" from="MainHallRoom41" to="." method="_on_MainShowerRoom_onEnter"]
+[connection signal="onReact" from="MainHallRoom41" to="." method="_on_MainShowerRoom_onReact"]
+[connection signal="onEnter" from="MainHallRoom39" to="." method="_on_MainDressingRoom_onEnter"]
+[connection signal="onReact" from="MainHallRoom39" to="." method="_on_MainDressingRoom_onReact"]
+[connection signal="onEnter" from="MainCanteen" to="." method="_on_MainCanteen_onEnter"]
+[connection signal="onReact" from="MainCanteen" to="." method="_on_MainCanteen_onReact"]
+[connection signal="onEnter" from="MainLaundry" to="." method="_on_MainLaundry_onEnter"]
+[connection signal="onReact" from="MainLaundry" to="." method="_on_MainLaundry_onReact"]

@@ -1,0 +1,123 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Game/World/SubWorld.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/World/GameRoom.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game/World/Floors/FightClubFloor.gd" type="Script" id=3]
+
+[node name="FightClubFloor" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="FightClubRoom" parent="." index="0" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+roomName = "Entrance"
+roomID = "fight_entrance"
+roomDescription = "Dark narrow corridor that was previously used for maintenance, judging from many tubes sprawling around the walls. "
+roomSprite = 3
+roomColor = 8
+population = 1
+
+[node name="FightClubRoom2" parent="." index="1" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 0, -64 )
+roomName = "The Underground"
+roomID = "fight_nearentrance"
+roomDescription = "Abandoned maintenance space that is now made into an arena."
+roomColor = 8
+population = 1
+
+[node name="FightClubRoom3" parent="." index="2" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -64, -64 )
+roomName = "The Underground"
+roomDescription = "Abandoned maintenance space that is now made into an arena."
+roomColor = 8
+population = 1
+
+[node name="FightClubRoom4" parent="." index="3" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -64, -128 )
+roomName = "The Underground"
+roomDescription = "Abandoned maintenance space that is now made into an arena."
+roomColor = 8
+population = 1
+
+[node name="FightClubArena" parent="." index="4" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 0, -128 )
+scale = Vector2( 1, 1 )
+roomName = "The Arena"
+roomID = "fight_arena"
+roomDescription = "Abandoned maintenance space that is now made into an arena."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 2
+population = 1
+
+[node name="FightClubRoom6" parent="." index="5" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -64, -192 )
+roomName = "The Underground"
+roomDescription = "Abandoned maintenance space that is now made into an arena."
+roomColor = 8
+population = 1
+
+[node name="FightClubRoom7" parent="." index="6" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 0, -192 )
+roomName = "Announcer's Balcony"
+roomID = "fight_announcer"
+roomDescription = "Abandoned maintenance space that is now made into an arena."
+roomSprite = 1
+roomColor = 7
+population = 1
+
+[node name="FightClubRoom8" parent="." index="7" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 64, -192 )
+roomName = "The Underground"
+roomDescription = "Abandoned maintenance space that is now made into an arena."
+roomColor = 8
+population = 1
+
+[node name="FightClubRoom9" parent="." index="8" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 64, -128 )
+roomName = "The Underground"
+roomID = "fight_neararena"
+roomDescription = "Abandoned maintenance space that is now made into an arena."
+roomSprite = 1
+roomColor = 8
+population = 1
+
+[node name="FightClubRoom10" parent="." index="9" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 64, -64 )
+roomName = "The Underground"
+roomDescription = "Abandoned maintenance space that is now made into an arena."
+roomColor = 8
+population = 1
+
+[node name="FightClubRoom11" parent="." index="10" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, -128 )
+roomName = "The Underground"
+roomDescription = "Abandoned maintenance space that is now made into an arena."
+roomColor = 8
+population = 1
+
+[node name="FightClubRoom12" parent="." index="11" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, -192 )
+roomName = "Slutwall"
+roomID = "fight_slutwall"
+roomDescription = "Abandoned maintenance space that is now made into an arena.
+
+One of the walls here has a row of big round holes in them roughly at your waist level. There are also a few smaller holes near each big one and many chains dangling, ready to be used. Your best guess is.. pretty lewd."
+roomColor = 8
+population = 1
+
+[connection signal="onEnter" from="FightClubRoom" to="." method="_on_FightClubRoom_onEnter"]
+[connection signal="onReact" from="FightClubRoom" to="." method="_on_FightClubRoom_onReact"]
