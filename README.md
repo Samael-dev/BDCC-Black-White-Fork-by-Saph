@@ -9,7 +9,7 @@ This game is influenced a lot by other erotic text rpg games like Trials in the 
 
 ### [Changelog](/CHANGELOG.md)
 
-### [Support me on Subscribestar.adult](https://subscribestar.adult/rahi)
+### [Support for (Rahi Original Author) on Subscribestar.adult](https://subscribestar.adult/rahi)
 
 Uses the latest version of Godot 3.X engine
 
